@@ -7,4 +7,16 @@ import {
   VideoLayout,
 } from "./room";
 
-export { Room, Participant, AudioPreset, LayoutPreset, Slot, VideoLayout };
+import { StatusCode, ErrorTypeResponse, GenericResponse } from "./response";
+
+export {
+  Room,
+  Participant,
+  AudioPreset,
+  LayoutPreset,
+  Slot,
+  VideoLayout,
+  StatusCode,
+  ErrorTypeResponse,
+  GenericResponse,
+};
