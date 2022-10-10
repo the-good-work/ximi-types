@@ -7,6 +7,4 @@ import {
   VideoLayout,
 } from "./room";
 
-export namespace XIMI {
-  export { Room, Participant, AudioPreset, LayoutPreset, Slot, VideoLayout };
-}
+export { Room, Participant, AudioPreset, LayoutPreset, Slot, VideoLayout };
