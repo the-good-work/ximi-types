@@ -18,7 +18,5 @@ export {
   LayoutPreset,
   Slot,
   VideoLayout,
-  StatusCode,
   ErrorTypeResponse,
-  GenericResponse,
 };
