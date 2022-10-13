@@ -8,14 +8,16 @@ export type Room = {
   layoutPresets?: LayoutPreset[];
 };
 
+export type ParticipantType = "CONTROL" | "OUTPUT" | "PERFORMER"
+
 export type Participant =
   | {
       name: string;
-      type: "control" | "output";
+      type: "CONTROL" | "OUTPUT";
     }
   | {
       name: string;
-      type: "performer";
+      type: "PERFORMER";
       // participant audio configuration
       audioMixMute: string[];
       audioOutDelay: number;

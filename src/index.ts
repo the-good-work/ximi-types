@@ -1,5 +1,6 @@
 import {
   Room,
+  ParticipantType,
   Participant,
   AudioPreset,
   LayoutPreset,
@@ -12,6 +13,7 @@ import { StatusCode, ErrorTypeResponse, GenericResponse } from "./response";
 export {
   Room,
   Participant,
+  ParticipantType,
   AudioPreset,
   LayoutPreset,
   Slot,
