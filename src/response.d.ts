@@ -1,1 +1,1 @@
-export type ErrorTypeResponse = "ROOM_MAX" | "ROOM_EXIST" | "NICKNAME_EXIST" | "INCORRECT_PASSCODE";
+export type ErrorTypeResponse = "ROOM_MAX" | "ROOM_EXIST" | "NICKNAME_EXIST" | "INCORRECT_PASSCODE" | "ROOM_NOT_EXIST"
