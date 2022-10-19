@@ -1,6 +1,5 @@
 import {
   Room,
-  ParticipantType,
   Participant,
   AudioPreset,
   LayoutPreset,
@@ -13,7 +12,6 @@ import { ErrorTypeResponse } from "./response";
 export {
   Room,
   Participant,
-  ParticipantType,
   AudioPreset,
   LayoutPreset,
   Slot,
