@@ -6,9 +6,9 @@ export type Room = {
   audioPresets?: AudioPreset[];
   layoutCurrent?: LayoutPreset;
   layoutPresets?: LayoutPreset[];
+  controlCount?: number;
+  outputCount?: number;
 };
-
-export type ParticipantType = "CONTROL" | "OUTPUT" | "PERFORMER"
 
 export type Participant =
   | {
