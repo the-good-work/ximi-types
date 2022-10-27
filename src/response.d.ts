@@ -1,4 +1,4 @@
-export type ErrorTypeResponse =
+export type ErrorType =
   | "ROOM_MAX"
   | "ROOM_EXIST"
   | "NICKNAME_EXIST"
@@ -7,7 +7,7 @@ export type ErrorTypeResponse =
   | "CREATE_ROOM_INVALID"
   | "PARTICIPANT_NAME_INVALID";
 
-export type ApiResponse = SuccessResponse | ErrorResponse;
+export type ApiPayload = SuccessPayload | ErrorPayload;
 
-type SuccessResponse = { status: "success"; message: string; data?: any };
-type ErrorResponse = { status: "error"; error: string };
+type SuccessPayload = { status: "success"; message: string; data?: any };
+type ErrorPayload = { status: "error"; error: string };
