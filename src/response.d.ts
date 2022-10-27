@@ -9,6 +9,5 @@ export type ErrorTypeResponse =
 
 export type ApiResponse = SuccessResponse | ErrorResponse;
 
-type SuccessResponse = { status: "success"; message: string };
+type SuccessResponse = { status: "success"; message: string; data?: any };
 type ErrorResponse = { status: "error"; error: string };
-
