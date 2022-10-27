@@ -7,7 +7,7 @@ import {
   VideoLayout,
 } from "./room";
 
-import { ErrorTypeResponse } from "./response";
+import { ErrorTypeResponse, ApiResponse } from "./response";
 
 export {
   Room,
