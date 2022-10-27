@@ -16,5 +16,6 @@ export {
   LayoutPreset,
   Slot,
   VideoLayout,
+  ApiResponse,
   ErrorTypeResponse,
 };
