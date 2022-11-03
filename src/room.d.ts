@@ -10,6 +10,15 @@ export type Room = {
   outputCount?: number;
 };
 
+export type ParticipantMetadata =
+  | {
+      type: Exclude<Participant["type"], "OUTPUT">;
+    }
+  | {
+      type: Extract<Participant["type"], "OUTPUT">;
+      target: string;
+    };
+
 export type Participant =
   | {
       name: string;
