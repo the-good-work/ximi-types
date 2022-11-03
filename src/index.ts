@@ -5,6 +5,9 @@ import {
   LayoutPreset,
   Slot,
   VideoLayout,
+  UpdateStatePayload,
+  ParticipantPerformer,
+  ParticipantNonPerformer,
 } from "./room";
 
 import { ErrorType, ApiPayload } from "./response";
@@ -18,4 +21,7 @@ export {
   VideoLayout,
   ApiPayload,
   ErrorType,
+  UpdateStatePayload,
+  ParticipantPerformer,
+  ParticipantNonPerformer,
 };
