@@ -8,6 +8,7 @@ import {
   UpdateStatePayload,
   ParticipantPerformer,
   ParticipantNonPerformer,
+  ParticipantMetadata,
 } from "./room";
 
 import { ErrorType, ApiPayload } from "./response";
@@ -24,4 +25,5 @@ export {
   UpdateStatePayload,
   ParticipantPerformer,
   ParticipantNonPerformer,
+  ParticipantMetadata,
 };
