@@ -33,21 +33,25 @@ export type ParticipantMetadata =
 export type RoomUpdateAction =
   | {
       type: "MUTE_AUDIO";
+      room_name: string;
       participant: string;
       target: string;
     }
   | {
       type: "UNMUTE_AUDIO";
+      room_name: string;
       participant: string;
       target: string;
     }
   | {
       type: "UPDATE_DELAY";
+      room_name: string;
       participant: string;
       delay: number;
     }
   | {
       type: "UPDATE_LAYOUT";
+      room_name: string;
       participant: string;
       layout: VideoLayout;
       slots: Slot[];
