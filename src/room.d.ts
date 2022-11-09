@@ -30,13 +30,36 @@ export type ParticipantMetadata =
       target: string;
     };
 
+export type RoomUpdateAction =
+  | {
+      type: "MUTE_AUDIO";
+      participant: string;
+      target: string;
+    }
+  | {
+      type: "UNMUTE_AUDIO";
+      participant: string;
+      target: string;
+    }
+  | {
+      type: "UPDATE_DELAY";
+      participant: string;
+      delay: number;
+    }
+  | {
+      type: "UPDATE_LAYOUT";
+      participant: string;
+      layout: VideoLayout;
+      slots: Slot[];
+    };
+
 export type Participant = ParticipantPerformer | ParticipantNonPerformer;
 
 export type ParticipantPerformer = {
   name: string;
   type: "PERFORMER";
   // participant audio configuration
-  audioMixMute: string[];
+  audioMixMute: string[]; // participant name
   audioOutDelay: number;
   // participant layout configuration
   video: {

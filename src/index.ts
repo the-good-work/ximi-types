@@ -9,6 +9,7 @@ import {
   ParticipantPerformer,
   ParticipantNonPerformer,
   ParticipantMetadata,
+  RoomUpdateAction,
 } from "./room";
 
 import { ErrorType, ApiPayload } from "./response";
@@ -26,4 +27,6 @@ export {
   ParticipantPerformer,
   ParticipantNonPerformer,
   ParticipantMetadata,
+  RoomUpdateAction,
 };
+
