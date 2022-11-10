@@ -92,6 +92,8 @@ export type ParticipantOutput = {
   sid: string;
   name: string;
   type: "OUTPUT";
+  targetName: string;
+  targetSid: string;
 };
 
 export type Preset = {
