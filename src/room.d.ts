@@ -2,23 +2,15 @@ export type Room = {
   name: string;
   passcode: string;
   participants?: Participant[];
-  audioCurrent?: AudioPreset;
-  audioPresets?: AudioPreset[];
-  layoutCurrent?: LayoutPreset;
-  layoutPresets?: LayoutPreset[];
+  currentSetting: ParticipantNonPerformer[];
+  currentPreset: string;
+  presets: Preset;
   controlCount?: number;
   outputCount?: number;
 };
 
 export type UpdateStatePayload =
-  | Pick<
-      Room,
-      | "participants"
-      | "audioCurrent"
-      | "audioPresets"
-      | "layoutCurrent"
-      | "layoutPresets"
-    >
+  | Pick<Room, "participants" | "currentSetting" | "currentPreset" | "presets">
   | ParticipantPerformer;
 
 export type ParticipantMetadata =
@@ -57,6 +49,18 @@ export type RoomUpdateAction =
       slots: Slot[];
     };
 
+export type RoomPresetRequest =
+  | {
+      type: "SAVE_PRESET";
+      room_name: string;
+      preset: Preset;
+    }
+  | {
+      type: "LOAD_PRESET";
+      room_name: string;
+      index: number;
+    };
+
 export type Participant = ParticipantPerformer | ParticipantNonPerformer;
 
 export type ParticipantPerformer = {
@@ -77,12 +81,8 @@ export type ParticipantNonPerformer = {
   type: "CONTROL" | "OUTPUT";
 };
 
-export type AudioPreset = {
-  name: string;
-  participant: ParticipantPerformer[];
-};
-
-export type LayoutPreset = {
+export type Preset = {
+  index: number;
   name: string;
   participant: ParticipantPerformer[];
 };
