@@ -64,6 +64,7 @@ export type RoomPresetRequest =
 export type Participant = ParticipantPerformer | ParticipantNonPerformer;
 
 export type ParticipantPerformer = {
+  sid: string;
   name: string;
   type: "PERFORMER";
   // participant audio configuration
@@ -77,6 +78,7 @@ export type ParticipantPerformer = {
 };
 
 export type ParticipantNonPerformer = {
+  sid: string;
   name: string;
   type: "CONTROL" | "OUTPUT";
 };
