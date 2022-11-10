@@ -2,7 +2,7 @@ export type Room = {
   name: string;
   passcode: string;
   participants?: Participant[];
-  currentSetting: ParticipantNonPerformer[];
+  currentSetting: (ParticipantPerformer | ParticipantControl)[];
   currentPreset: string;
   presets: Preset;
   controlCount?: number;
@@ -61,7 +61,10 @@ export type RoomPresetRequest =
       index: number;
     };
 
-export type Participant = ParticipantPerformer | ParticipantNonPerformer;
+export type Participant =
+  | ParticipantPerformer
+  | ParticipantControl
+  | ParticipantOutput;
 
 export type ParticipantPerformer = {
   sid: string;
@@ -77,10 +80,17 @@ export type ParticipantPerformer = {
   };
 };
 
-export type ParticipantNonPerformer = {
+export type ParticipantControl = {
   sid: string;
   name: string;
-  type: "CONTROL" | "OUTPUT";
+  type: "CONTROL";
+  audioMixMute: string[]; // participant name
+};
+
+export type ParticipantOutput = {
+  sid: string;
+  name: string;
+  type: "OUTPUT";
 };
 
 export type Preset = {
