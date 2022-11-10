@@ -4,7 +4,7 @@ export type Room = {
   participants?: Participant[];
   currentSetting: (ParticipantPerformer | ParticipantControl)[];
   currentPreset: string;
-  presets: Preset;
+  presets: Preset[];
   controlCount?: number;
   outputCount?: number;
 };
