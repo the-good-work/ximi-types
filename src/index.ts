@@ -1,8 +1,7 @@
 import {
   Room,
   Participant,
-  AudioPreset,
-  LayoutPreset,
+  Preset,
   Slot,
   VideoLayout,
   UpdateStatePayload,
@@ -10,6 +9,7 @@ import {
   ParticipantNonPerformer,
   ParticipantMetadata,
   RoomUpdateAction,
+  RoomPresetRequest,
 } from "./room";
 
 import { ErrorType, ApiPayload } from "./response";
@@ -17,8 +17,7 @@ import { ErrorType, ApiPayload } from "./response";
 export {
   Room,
   Participant,
-  AudioPreset,
-  LayoutPreset,
+  Preset,
   Slot,
   VideoLayout,
   ApiPayload,
@@ -28,5 +27,5 @@ export {
   ParticipantNonPerformer,
   ParticipantMetadata,
   RoomUpdateAction,
+  RoomPresetRequest,
 };
-
