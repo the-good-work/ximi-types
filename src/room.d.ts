@@ -19,7 +19,8 @@ export type ParticipantMetadata =
     }
   | {
       type: Extract<Participant["type"], "OUTPUT">;
-      target: string;
+      targetName: string;
+      targetSid: string;
     };
 
 export type RoomUpdateAction =
