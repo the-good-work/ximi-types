@@ -16,13 +16,17 @@ export type ServerUpdate =
   | PingPayload
   | PongPayload;
 
-export type RoomUpdatePayload = Pick<
-  Room,
-  "participants" | "currentSetting" | "currentPreset" | "presets"
-> & { type: "room-update" };
+export type RoomUpdatePayload = {
+  type: "room-update";
+  update: Pick<
+    Room,
+    "participants" | "currentSetting" | "currentPreset" | "presets"
+  >;
+};
 
-export type PerformerUpdatePayload = ParticipantPerformer & {
+export type PerformerUpdatePayload = {
   type: "performer-update";
+  update: ParticipantPerformer;
 };
 
 export type MessagePayload = {
