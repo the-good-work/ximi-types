@@ -9,9 +9,33 @@ export type Room = {
   outputCount?: number;
 };
 
+export type ServerUpdate =
+  | UpdateStatePayload
+  | MessagePayload
+  | PingPayload
+  | PongPayload;
+
 export type UpdateStatePayload =
-  | Pick<Room, "participants" | "currentSetting" | "currentPreset" | "presets">
-  | ParticipantPerformer;
+  | (Pick<
+      Room,
+      "participants" | "currentSetting" | "currentPreset" | "presets"
+    > & { type: "room-update" })
+  | (ParticipantPerformer & { type: "performer-update" });
+
+export type MessagePayload = {
+  type: "message";
+  message: string;
+};
+
+export type PingPayload = {
+  type: "ping";
+  target: string;
+};
+
+export type PongPayload = {
+  type: "pong";
+  target: string;
+};
 
 export type ParticipantMetadata =
   | {
