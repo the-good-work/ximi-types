@@ -10,17 +10,20 @@ export type Room = {
 };
 
 export type ServerUpdate =
-  | UpdateStatePayload
+  | RoomUpdatePayload
+  | PerformerUpdatePayload
   | MessagePayload
   | PingPayload
   | PongPayload;
 
-export type UpdateStatePayload =
-  | (Pick<
-      Room,
-      "participants" | "currentSetting" | "currentPreset" | "presets"
-    > & { type: "room-update" })
-  | (ParticipantPerformer & { type: "performer-update" });
+export type RoomUpdatePayload = Pick<
+  Room,
+  "participants" | "currentSetting" | "currentPreset" | "presets"
+> & { type: "room-update" };
+
+export type PerformerUpdatePayload = ParticipantPerformer & {
+  type: "performer-update";
+};
 
 export type MessagePayload = {
   type: "message";
