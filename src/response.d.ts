@@ -5,6 +5,7 @@ export type ErrorType =
   | "INCORRECT_PASSCODE"
   | "ROOM_NOT_EXIST"
   | "CREATE_ROOM_INVALID"
+  | "PARTICIPANT_NAME_EXIST"
   | "PARTICIPANT_NAME_INVALID";
 
 export type ApiPayload = SuccessPayload | ErrorPayload;
