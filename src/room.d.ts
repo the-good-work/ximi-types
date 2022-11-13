@@ -132,7 +132,7 @@ export type Preset = {
 };
 
 export type Slot = {
-  size: { x: number; y: number };
+  size: { w: number; h: number };
   position: { x: number; y: number };
   nickname: string;
 };
