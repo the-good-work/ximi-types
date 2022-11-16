@@ -128,7 +128,7 @@ export type ParticipantOutput = {
 export type Preset = {
   index: number;
   name: string;
-  participant: ParticipantPerformer[];
+  participants?: ParticipantPerformer[];
 };
 
 export type Slot = {
