@@ -38,11 +38,13 @@ export type MessagePayload = {
 export type PingPayload = {
   type: "ping";
   target: string;
+  id: number;
 };
 
 export type PongPayload = {
   type: "pong";
   target: string;
+  id: number;
 };
 
 export type ParticipantMetadata =
