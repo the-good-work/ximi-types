@@ -32,6 +32,7 @@ export type PerformerUpdatePayload = {
 export type MessagePayload = {
   type: "message";
   message: string;
+  sender: string;
 };
 
 export type PingPayload = {
