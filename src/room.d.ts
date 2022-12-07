@@ -12,6 +12,7 @@ export type Room = {
 export type ServerUpdate =
   | RoomUpdatePayload
   | PerformerUpdatePayload
+  | OutputUpdatePayload
   | MessagePayload
   | PingPayload
   | PongPayload;
@@ -27,6 +28,14 @@ export type RoomUpdatePayload = {
 export type PerformerUpdatePayload = {
   type: "performer-update";
   update: ParticipantPerformer;
+};
+
+export type OutputUpdatePayload = {
+  type: "output-update";
+  update: {
+    output: ParticipantOutput;
+    performer: ParticipantPerformer;
+  };
 };
 
 export type MessagePayload = {
