@@ -102,6 +102,11 @@ export type RoomPresetRequest =
       type: "LOAD_PRESET";
       room_name: string;
       index: number;
+    }
+  | {
+      type: "LOAD_PRESET_FILE";
+      room_name: string;
+      presets: Preset[];
     };
 
 export type Participant =
