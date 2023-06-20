@@ -2,7 +2,11 @@ export type Room = {
   name: string;
   passcode: string;
   participants?: Participant[];
-  currentSetting: (ParticipantPerformer | ParticipantControl)[];
+  currentSetting: (
+    | ParticipantPerformer
+    | ParticipantControl
+    | ParticipantScout
+  )[];
   currentPreset: string;
   presets: Preset[];
   controlCount?: number;
@@ -12,9 +16,9 @@ export type Room = {
 export type ServerUpdate =
   | RoomUpdatePayload
   | PerformerUpdatePayload
+  | ScoutUpdatePayload
   | OutputUpdatePayload
   | MessagePayload
-  | TextPosterPayload
   | PingPayload
   | PongPayload;
 
@@ -26,14 +30,14 @@ export type RoomUpdatePayload = {
   >;
 };
 
-export type TextPosterPayload = {
-  type: "text-poster";
-  update: { text: string };
-};
-
 export type PerformerUpdatePayload = {
   type: "performer-update";
   update: ParticipantPerformer;
+};
+
+export type ScoutUpdatePayload = {
+  type: "scout-update";
+  update: ParticipantScout;
 };
 
 export type OutputUpdatePayload = {
@@ -117,6 +121,7 @@ export type RoomPresetRequest =
 
 export type Participant =
   | ParticipantPerformer
+  | ParticipantScout
   | ParticipantControl
   | ParticipantOutput;
 
@@ -132,6 +137,16 @@ export type ParticipantPerformer = {
     slots: Slot[];
     layout: VideoLayout;
   };
+};
+
+export type ParticipantScout = {
+  sid: string;
+  name: string;
+  type: "PERFORMER";
+  // participant audio configuration
+  audioMixMute: string[]; // participant name
+  audioOutDelay: number;
+  textPoster: string;
 };
 
 export type ParticipantControl = {
