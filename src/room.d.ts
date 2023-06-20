@@ -142,7 +142,7 @@ export type ParticipantPerformer = {
 export type ParticipantScout = {
   sid: string;
   name: string;
-  type: "PERFORMER";
+  type: "SCOUT";
   // participant audio configuration
   audioMixMute: string[]; // participant name
   audioOutDelay: number;
