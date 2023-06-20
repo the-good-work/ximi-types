@@ -6,6 +6,7 @@ import {
   VideoLayout,
   ParticipantPerformer,
   ParticipantControl,
+  ParticipantScout,
   ParticipantOutput,
   ParticipantMetadata,
   RoomUpdateAction,
