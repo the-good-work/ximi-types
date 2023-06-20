@@ -14,6 +14,7 @@ export type ServerUpdate =
   | PerformerUpdatePayload
   | OutputUpdatePayload
   | MessagePayload
+  | TextPosterPayload
   | PingPayload
   | PongPayload;
 
@@ -23,6 +24,11 @@ export type RoomUpdatePayload = {
     Room,
     "participants" | "currentSetting" | "currentPreset" | "presets"
   >;
+};
+
+export type TextPosterPayload = {
+  type: "text-poster";
+  update: { text: string };
 };
 
 export type PerformerUpdatePayload = {
