@@ -100,6 +100,12 @@ export type RoomUpdateAction =
       participant: string;
       layout: VideoLayout;
       slots: Slot[];
+    }
+  | {
+      type: "UPDATE_POSTER_TEXT";
+      room_name: string;
+      participant: string;
+      text: string;
     };
 
 export type RoomPresetRequest =
