@@ -172,7 +172,7 @@ export type ParticipantOutput = {
 export type Preset = {
   index: number;
   name: string;
-  participants?: ParticipantPerformer[];
+  participants?: (ParticipantScout | ParticipantPerformer)[];
 };
 
 export type Slot = {
